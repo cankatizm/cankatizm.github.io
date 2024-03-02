@@ -244,7 +244,7 @@ var main = (function () {
     };
 
     Terminal.prototype.lock = function () {
-        this.exec();
+		this.exec();
         this.cmdLine.blur();
         this.cmdLine.disabled = true;
         this.sidenavElements.forEach(function (elem) {
@@ -265,7 +265,7 @@ var main = (function () {
     Terminal.prototype.handleFill = function () {
         var cmdComponents = this.cmdLine.value.trim().split(" ");
         if ((cmdComponents.length <= 1) || (cmdComponents.length === 2 && cmdComponents[0] === cmds.OPEN.value)) {
-            this.lock();
+			this.lock();
             var possibilities = [];
             if (cmdComponents[0].toLowerCase() === cmds.OPEN.value) {
                 if (cmdComponents.length === 1) {
@@ -377,7 +377,7 @@ var main = (function () {
     };
 	
 	Terminal.prototype.contact = function () { //edit
-        var results = "cankataykurt[at]gmail[dot]com";
+        var results = "Feel free to drop an email to \"cankataykurt[at]gmail[dot]com\"! ;)";
         this.type(results.trim(), this.unlock.bind(this));
     };
 
