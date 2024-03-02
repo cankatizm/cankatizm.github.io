@@ -12,25 +12,25 @@ var configs = (function () {
         }
     };
     Singleton.defaultOptions = {
-        general_help: "Use the commands below for the actions defined:",
+        general_help: "...\nUse the commands below for the actions defined:\n",
 		cv_help: "Open up-to-date Curriculum Vitae.",
 		social_help: "List social media accounts.",
 		contact_help: "Share e-mail address.",
-        open_help: "Open links from the side menu. Example: 'open LinkedIn.txt'.",
+        open_help: "Open links from the side menu. Example: \"open Linkedin.txt\".",
         help_help: "You are here!",
         clear_help: "Clear the terminal.",
-        reboot_help: "Reboot the system.",
+        reboot_help: "Reboot the system.\n...",
         cd_help: "Change the current working directory.",
         mv_help: "Move (rename) files.",
         rm_help: "Remove files or directories.",
         rmdir_help: "Remove directory, this command will only work if the folders are empty.",
         touch_help: "Change file timestamps. If the file doesn't exist, it's created an empty one.",
         sudo_help: "Execute a command as the superuser.",
-        welcome: "Welcome to Cankat Aykurt's homepage (nerd and retrospective version).\nExecute the 'help' command for assistance or use more user-friendly menu on your left.",
+        welcome: "Welcome to Cankat Aykurt's homepage (nerd and retrospective version).\nExecute \"help\" command for navigation or use more user-friendly menu on your left.\n",
         internet_explorer_warning: "NOTE: I see you're using internet explorer, this website won't work properly.",
         welcome_file_name: "welcome_message.txt",
-        invalid_command_message: "<value>: command not found.",
-        reboot_message: "Preparing to reboot...\n\n3...\n\n2...\n\n1...\n\nRebooting...\n\n",
+        invalid_command_message: "\"<value>\"? What do you mean darling?",
+        reboot_message: "Preparing to reboot...\n3...\n2...\n1...\nRebooting...\n\n",
         permission_denied_message: "Unable to '<value>', permission denied.",
         sudo_message: "Unable to sudo using a web client.",
         usage: "Usage",
@@ -69,8 +69,7 @@ var files = (function () {
     Singleton.defaultOptions = {
 		"Home.txt": "http://www.cankataykurt.com",
 		"CV.txt": "http://cv.cankataykurt.com/",
-        "LinkedIn.txt": "https://linkedin.com/in/cankataykurt",
-        "Twitter.txt": "https://twitter.com/cankataykurt",
+        "Linkedin.txt": "https://linkedin.com/in/cankataykurt",
 		"Instagram.txt": "https://instagram.com/cankatizm",
 		"Spotify.txt": "https://open.spotify.com/user/cankatizm",
         "Contact.txt": "cankataykurt[at]gmail[dot]com"
@@ -183,7 +182,7 @@ var main = (function () {
             this.focus();
         }.bind(this));
         this.cmdLine.addEventListener("keydown", function (event) {
-            if (event.which === 13 || event.keyCode === 13) {
+			if (event.which === 13 || event.keyCode === 13) {
                 this.handleCmd();
                 ignoreEvent(event);
             } else if (event.which === 9 || event.keyCode === 9) {
@@ -327,7 +326,7 @@ var main = (function () {
             case cmds.REBOOT.value:
                 this.reboot();
                 break;
-            case cmds.CD.value:
+            /*case cmds.CD.value:
             case cmds.MV.value:
             case cmds.RMDIR.value:
             case cmds.RM.value:
@@ -336,7 +335,7 @@ var main = (function () {
                 break;
             case cmds.SUDO.value:
                 this.sudo();
-                break;
+                break;*/
             default:
                 this.invalidCommand(cmdComponents);
                 break;
@@ -362,18 +361,18 @@ var main = (function () {
     Terminal.prototype.help = function () {
         var result = configs.getInstance().general_help + "\n";
         for (var cmd in cmds) {
-            result += cmds[cmd].value + " -> " + cmds[cmd].help + "\n";
+            result +=  "\"" + cmds[cmd].value + "\"" + " -> " + cmds[cmd].help + "\n";
         }
         this.type(result.trim(), this.unlock.bind(this));
     };
 	
 	Terminal.prototype.cv = function () { //edit
-        var results = "Type 'open CV.txt' (without apostrophe characters).";
+        var results = "Type \"open CV.txt\" (without \" characters).";
         this.type(results.trim(), this.unlock.bind(this));
     };
 	
 	Terminal.prototype.social = function () { //edit
-        var results = "Type 'open LinkedIn.txt' for LinkedIn, 'open Twitter.txt' for Twitter, 'open Instagram.txt' for Instagram and 'open Spotify.txt' for Spotify (without apostrophe characters).";
+        var results = "Type \"open LinkedIn.txt\" for LinkedIn, \"open Instagram.txt\" for Instagram and \"open Spotify.txt\" for Spotify (without \" characters).";
         this.type(results.trim(), this.unlock.bind(this));
     };
 	
