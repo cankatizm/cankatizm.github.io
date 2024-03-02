@@ -126,7 +126,6 @@ var main = (function () {
 		SOCIAL: { value: "social", help: configs.getInstance().social_help }, //edit
 		CONTACT: { value: "contact", help: configs.getInstance().contact_help }, //edit
 		HELP: { value: "help", help: configs.getInstance().help_help },
-        DATE: { value: "date", help: configs.getInstance().date_help },
         OPEN: { value: "open", help: configs.getInstance().open_help }, //edit
 		CLEAR: { value: "clear", help: configs.getInstance().clear_help },
         REBOOT: { value: "reboot", help: configs.getInstance().reboot_help }
