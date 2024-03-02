@@ -17,7 +17,6 @@ var configs = (function () {
 		social_help: "List social media accounts.",
 		contact_help: "Share e-mail address.",
         open_help: "Open links from the side menu. Example: 'open LinkedIn.txt'.",
-        date_help: "Print the system date and time.",
         help_help: "You are here!",
         clear_help: "Clear the terminal.",
         reboot_help: "Reboot the system.",
@@ -319,9 +318,6 @@ var main = (function () {
 			case cmds.OPEN.value:
                 this.open(cmdComponents);
                 break;
-            case cmds.DATE.value:
-                this.date();
-                break;
             case cmds.HELP.value:
                 this.help();
                 break;
@@ -362,10 +358,6 @@ var main = (function () {
     Terminal.prototype.sudo = function () {
         this.type(configs.getInstance().sudo_message, this.unlock.bind(this));
     }
-
-    Terminal.prototype.date = function (cmdComponents) {
-        this.type(new Date().toString(), this.unlock.bind(this));
-    };
 
     Terminal.prototype.help = function () {
         var result = configs.getInstance().general_help + "\n";
