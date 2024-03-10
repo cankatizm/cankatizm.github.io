@@ -367,7 +367,7 @@ var main = (function () {
     };
 	
 	Terminal.prototype.cv = function () { //edit
-        var results = "Type \"open CV.txt\" (without \" characters).";
+        var results = "...\nType \"open CV.txt\" (without \" characters).\n...";
         this.type(results.trim(), this.unlock.bind(this));
     };
 	
@@ -377,7 +377,7 @@ var main = (function () {
     };
 	
 	Terminal.prototype.contact = function () { //edit
-        var results = "Feel free to drop an email to \"cankataykurt[at]gmail[dot]com\"! ;)";
+        var results = "...\nFeel free to drop an email to \"cankataykurt[at]gmail[dot]com\"! ;)\n...";
         this.type(results.trim(), this.unlock.bind(this));
     };
 
