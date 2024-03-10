@@ -16,7 +16,7 @@ var configs = (function () {
 		cv_help: "Open up-to-date Curriculum Vitae.",
 		social_help: "List social media accounts.",
 		contact_help: "Share e-mail address.",
-        open_help: "Open links from the side menu. Example: \"open Linkedin.txt\".",
+        open_help: "Open links from the side menu. Example: \"open Linkedin.exe\".",
         help_help: "You are here!",
         clear_help: "Clear the terminal.",
         reboot_help: "Reboot the system.\n...",
@@ -28,7 +28,7 @@ var configs = (function () {
         sudo_help: "Execute a command as the superuser.",
         welcome: "Welcome to Cankat Aykurt's homepage (nerd and retrospective version).\n\nExecute \"help\" command for navigation or use more user-friendly menu on your left.\n",
         internet_explorer_warning: "NOTE: I see you're using internet explorer, this website won't work properly.",
-        welcome_file_name: "welcome_message.txt",
+        welcome_file_name: "welcome_message.exe",
         invalid_command_message: "\"<value>\"? What do you mean darling?",
         reboot_message: "Preparing to reboot...\n3...\n2...\n1...\nRebooting...\n\n",
         permission_denied_message: "Unable to '<value>', permission denied.",
@@ -67,12 +67,12 @@ var files = (function () {
         }
     };
     Singleton.defaultOptions = {
-		"Home.txt": "http://www.cankataykurt.com",
-		"CV.txt": "http://cv.cankataykurt.com/",
-        	"Linkedin.txt": "https://linkedin.com/in/cankataykurt",
-		"Instagram.txt": "https://instagram.com/cankatizm",
-		"Spotify.txt": "https://open.spotify.com/user/cankatizm",
-        	"Contact.txt": "cankataykurt[at]gmail[dot]com"
+		"Home.exe": "http://www.cankataykurt.com",
+		"CV.exe": "http://cv.cankataykurt.com/",
+        	"Linkedin.exe": "https://linkedin.com/in/cankataykurt",
+		"Instagram.exe": "https://instagram.com/cankatizm",
+		"Spotify.exe": "https://open.spotify.com/user/cankatizm",
+        	"Contact.exe": "cankataykurt[at]gmail[dot]com"
     };
     return {
         getInstance: function (options) {
@@ -367,12 +367,12 @@ var main = (function () {
     };
 	
 	Terminal.prototype.cv = function () { //edit
-        var results = "...\nType \"open CV.txt\" (without \" characters).\n...";
+        var results = "...\nType \"open CV.exe\" (without \" characters).\n...";
         this.type(results.trim(), this.unlock.bind(this));
     };
 	
 	Terminal.prototype.social = function () { //edit
-        var results = "...\nType \"open Linkedin.txt\" for LinkedIn, \"open Instagram.txt\" for Instagram and \"open Spotify.txt\" for Spotify (without \" characters).\n...";
+        var results = "...\nType \"open Linkedin.exe\" for LinkedIn, \"open Instagram.exe\" for Instagram and \"open Spotify.exe\" for Spotify (without \" characters).\n...";
         this.type(results.trim(), this.unlock.bind(this));
     };
 	
