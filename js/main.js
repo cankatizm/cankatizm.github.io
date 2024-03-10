@@ -372,7 +372,7 @@ var main = (function () {
     };
 	
 	Terminal.prototype.social = function () { //edit
-        var results = "Type \"open Linkedin.txt\" for LinkedIn, \"open Instagram.txt\" for Instagram and \"open Spotify.txt\" for Spotify (without \" characters).";
+        var results = "...\nType \"open Linkedin.txt\" for LinkedIn, \"open Instagram.txt\" for Instagram and \"open Spotify.txt\" for Spotify (without \" characters).\n...";
         this.type(results.trim(), this.unlock.bind(this));
     };
 	
