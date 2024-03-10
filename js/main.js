@@ -12,7 +12,7 @@ var configs = (function () {
         }
     };
     Singleton.defaultOptions = {
-        general_help: "...\nUse the commands below for the actions defined:\n",
+        general_help: "...\nUse the commands below for the actions defined (without \" characters):\n",
 		cv_help: "Open up-to-date Curriculum Vitae.",
 		social_help: "List social media accounts.",
 		contact_help: "Share e-mail address.",
