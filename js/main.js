@@ -69,10 +69,10 @@ var files = (function () {
     Singleton.defaultOptions = {
 		"Home.txt": "http://www.cankataykurt.com",
 		"CV.txt": "http://cv.cankataykurt.com/",
-        "Linkedin.txt": "https://linkedin.com/in/cankataykurt",
+        	"Linkedin.txt": "https://linkedin.com/in/cankataykurt",
 		"Instagram.txt": "https://instagram.com/cankatizm",
 		"Spotify.txt": "https://open.spotify.com/user/cankatizm",
-        "Contact.txt": "cankataykurt[at]gmail[dot]com"
+        	"Contact.txt": "cankataykurt[at]gmail[dot]com"
     };
     return {
         getInstance: function (options) {
@@ -372,7 +372,7 @@ var main = (function () {
     };
 	
 	Terminal.prototype.social = function () { //edit
-        var results = "Type \"open LinkedIn.txt\" for LinkedIn, \"open Instagram.txt\" for Instagram and \"open Spotify.txt\" for Spotify (without \" characters).";
+        var results = "Type \"open Linkedin.txt\" for LinkedIn, \"open Instagram.txt\" for Instagram and \"open Spotify.txt\" for Spotify (without \" characters).";
         this.type(results.trim(), this.unlock.bind(this));
     };
 	
